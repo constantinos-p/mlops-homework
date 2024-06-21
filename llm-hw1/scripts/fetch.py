@@ -104,6 +104,7 @@ def searchQuery2(queryArg):
 def elastic_search(search_query):
 
     response = es_client.search(index=index_name, body=search_query)
+    print("response",response)
     
     result_docs = []    
     for hit in response['hits']['hits']:
